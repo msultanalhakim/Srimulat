@@ -1,3 +1,3 @@
 <footer>
-    <p>&copy; 2023, Tim Srimulat</p>
+    <p>&copy; 2023 Srimulat. All rights reserved.</p>
 </footer>
