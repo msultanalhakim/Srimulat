@@ -6,23 +6,41 @@
     <body>
         <nav>
             <ul>
-                <a href=""><img src="images/logo-brown.png" alt="Logo Srimulat"></a>
+                <li><a href=""><img src="images/logo/logo-white-width.png" alt="Logo Srimulat"></a></li>
             </ul>
             <ul>
-                <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li><a href=""><i class="fa-solid fa-bell"></i></a></li>
+                <li><a href="">Beranda</a></li>
+                <li><a href="">Definisi</a></li>
+                <li><a href="">Karakter</a></li>
+                <li><a href="">Festival</a></li>
+                <li><a href="">Museum</a></li>
+            </ul>
+            <ul>
                 <li>
-                    <a href="" onclick="dropdownNav();"><i class="fa-solid fa-user"></i> User <i class="fa-solid fa-caret-down"></i></a>
+                    <a href="" onclick="dropdownNav();" class="nav-user"><i class="fa-solid fa-user"></i> <i class="fa-solid fa-caret-down"></i></a>
                     <ul class="dropdown-content" id="myDropdown">
                         <li><a href="">Dropdown 1</a></li>
                         <li><a href="">Dropdown 2</a></li>
                     </ul>
                 </li>
+                <li>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider" onclick=""></span>
+                      </label>
+                </li>
             </ul>
         </nav>
-        <div class="container" style="background-color: red;"></div>
-        <div class="container" style="background-color: blue;"></div>
-        <div class="container" style="background-color: green;"></div>
+        <div class="hero-section" id="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Wayang</h1>
+                <p id="hero-paragraph"></p>
+            </div>
+        </div>
+        <div class="container" style="background-color: rgb(21, 28, 20,1);height:100vh;">test</div>
+        <div class="container" style="background-color: green;">test</div>
         <script src="https://kit.fontawesome.com/d9b2e6872d.js" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
