@@ -17,7 +17,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 20;
+  z-index: 10;
 }
 
 nav ul {
@@ -34,6 +34,7 @@ nav ul li {
 }
 
 nav ul li a {
+  cursor: pointer;
   text-decoration: none;
   color: #eeeeee;
   -webkit-transition: 0.3s;
@@ -65,6 +66,41 @@ nav ul li .nav-user{
 nav ul li .nav-user:hover{
   background-color: #243122;
   color: #eeeeee;
+}
+
+nav.sticky {
+  position: fixed;
+  top: -100px;
+  animation: slideDown 0.5s ease forwards;
+  background-color: #0d1928;
+}
+
+@keyframes slideDown {
+  0%{
+      top: -100;
+  }
+  80%{
+      top: 0;
+  }
+  100% {
+      top: 0;
+  }
+}
+
+nav.slide-up {
+  animation: slideUpAnim 4s ease forwards;
+}
+
+@keyframes slideUpAnim {
+  0% {
+      top: 0;
+  }
+  80% {
+      top: 0;
+  }
+  100% {
+      top: -100;
+  }
 }
 
 .switch {
@@ -139,7 +175,7 @@ input:checked+.slider:before {
 .hero-section .hero-overlay{
   position: absolute;
   z-index: 0;
-  background: linear-gradient(rgb(21, 28, 20,0.8),rgb(21, 28, 20,0.5),rgb(21, 28, 20,0.4),rgb(21, 28, 20,0.6),rgb(21, 28, 20,0.95), rgb(21, 28, 20,0.98));
+  background: linear-gradient(rgb(21, 28, 20,0.8),rgb(21, 28, 20,0.5),rgb(21, 28, 20,0.4),rgb(21, 28, 20,0.6),rgb(21, 28, 20,0.9), rgb(21, 28, 20,1));
   width: 100%;
   height: 100vh;
   filter: blur(100%);
