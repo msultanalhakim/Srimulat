@@ -388,13 +388,14 @@ input:checked+.slider:before {
 
 .hero-section .hero-footer p {
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     padding: 10px 0;
+    font-style: italic;
 }
 
 .hero-section .hero-footer a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     font-weight: 600;
 }
