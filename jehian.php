@@ -28,27 +28,27 @@
             <iframe src="https://www.youtube.com/embed/SWrEbZN89ZY"></iframe>
             <div class="g-list">
                 <div class="g-list-item">
-                    <img src="" alt="Wayang Kulit">
+                    <img src="images/wayang/kulit.png" alt="Wayang Kulit" style="scale: 3; transform: translate(5%, 25%)">
                 </div>
                 <div class="g-list-item">
-                    <img src="" alt="Wayang Pring">
+                    <img src="images/wayang/pring.png" alt="Wayang Pring" style="scale: 3; transform: translate(2%, 25%)">
                 </div>
                 <div class="g-list-item">
-                    <img src="" alt="Wayang Golek">
+                    <img src="images/wayang/golek.png" alt="Wayang Golek" style="scale: 3; transform: translate(0, 32%)">
                 </div>
                 <div class="g-list-item">
-                    <img src="" alt="Wayang Suket">
+                    <img src="images/wayang/suket.png" alt="Wayang Suket" style="scale: 3; transform: translate(16%, 25%)">
                 </div>
                 <div class="g-list-item">
-                    <img src="" alt="Wayang Wong">
+                    <img src="images/wayang/wong.png" alt="Wayang Wong" style="scale: 3; transform: translate(12%, 25%)">
                 </div>
                 <div class="g-list-item">
-                    <img src="" alt="Wayang Potehi">
+                    <img src="images/wayang/potehi.png" alt="Wayang Potehi" style="scale: 1.5; transform: translate(-6%, 2%)">
                 </div>
             </div>
         </div>
         <div class="g-right">
-            <img src="" alt="">
+            <img src="images/wayang/kulit.png" alt="Wayang Kulit">
         </div>
     </div>
 </section>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,21 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+    background-color: rgba(174, 189, 146, 0.5);
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(21, 28, 20);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(174, 189, 146);
+    border-radius: 16px;
+}
+::-webkit-scrollbar-button {
+    display: none;
 }
 
 /* Navbar Section*/
@@ -372,20 +389,30 @@ input:checked+.slider:before {
 .hero-section .footer-container {
     position: relative;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow: auto;
     width: 100%;
-    display: block;
     margin: 4px 0 20px;
+    scrollbar-width: auto;
+}
+
+.hero-section .footer-container::-webkit-scrollbar {
+    height: 6px;
 }
 
 .hero-footer .footer-content {
-    display: inline-block;
-    width: 33%;
-    padding: 20px;
-    z-index: 1;
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    height: fit-content;
+    padding-bottom: 14px;
 }
 
-.hero-footer .footer-divider {
+.hero-footer .footer-content p {
+    width: fit-content;
+}
+
+/* .hero-footer .footer-divider {
     position: relative;
     width: 100%;
     color: white;
@@ -410,7 +437,7 @@ input:checked+.slider:before {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     z-index: 1;
-}
+} */
 
 /* Festival Section */
 .festival-section {
