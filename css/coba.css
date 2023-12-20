@@ -451,12 +451,12 @@ input:checked+.slider:before {
 .festival-section .festival-content{
     width: 100%;
     margin-top: 170px;
+    display: flex;
 }
 
 .festival-content .festival-title{
     width: 100%;
     padding: 60px;
-    text-align: center;
 }
 
 .festival-content .festival-title h3{
@@ -470,31 +470,67 @@ input:checked+.slider:before {
     font-size: 14px;
 }
 
-.festival-content .festival-image{
-    width: 100%;
+.festival-content .festival-title .festival-title-image {
+    margin-top: 10px;
     display: flex;
-    justify-content: space-around;
+    gap: 10px;
 }
 
-.festival-image .image-content{
-    position: relative;
-    width: 23%;
+.festival-content .festival-list{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    color: #eeeeee;
+    font-size: 12px;
+}
+
+.festival-list .festival-event{
     -webkit-transition: .3s;
     transition: .3s;
-}
-
-.festival-image .image-content img{
-    width: 100%;
-    height: 390px;
+    border: 1px solid #ffffff;
     border-radius: 4px;
-    filter: brightness(60%);
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
 }
 
-.festival-image .image-content:hover{
+.festival-list .festival-event a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+.festival-list .festival-event:hover{
     transform: scale(1.1);
 }
 
-.image-content .image-title{
+.festival-list .festival-event .festival-event-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.festival-list .festival-event .festival-event-head b {
+    font-size: 16px;
+}
+
+.festival-list .festival-event .festival-event-head p {
+    opacity: 0.5;
+}
+
+.festival-list a.festival-event-foot {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+.festival-event .image-title{
     position: absolute;
     width: 100%;
     bottom: 15px;
@@ -503,12 +539,12 @@ input:checked+.slider:before {
     padding: 8px;
 }
 
-.image-content .image-title h3{
+.festival-event .image-title h3{
     color: #eeeeee;
     font-weight: 600;
 }
 
-.image-content .image-title p{
+.festival-event .image-title p{
     color: #eeeeee;
     width: 100%;
 }
