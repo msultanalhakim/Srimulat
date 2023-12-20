@@ -11,6 +11,19 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+@font-face {
+    font-family: 'Mahameru-Bold';
+    src: url('../fonts/Mahameru/Mahameru-Bold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Mahameru-Medium';
+    src: url('../fonts/Mahameru/Mahameru-Medium.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Mahameru-Regular';
+    src: url('../fonts/Mahameru/Mahameru-Regular.otf') format('truetype');
+}
+
 ::selection {
     background-color: rgba(174, 189, 146, 0.5);
 }
