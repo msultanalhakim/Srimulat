@@ -1,22 +1,23 @@
-<html>
-  <head>
-    <title>Indonesian Wayang</title>
-    <link rel="stylesheet" href="css/coba.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <style>
-      .hidden {
-        visibility: hidden;
-      }
-
-      .visible {
-        visibility: visible !important;
-      }
-    </style>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srimulat | Indonesian Puppet Culture</title>
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/coba.css">
+  <style>
+    .hidden {
+      visibility: hidden;
+    }
+    .visible {
+      visibility: visible !important;
+    }
+  </style>
+</head>
+<body>
     <nav id="navigation-bar">
       <button id="nav-toggle" class="nav-toggle">
         <i class="fa-solid fa-list"></i>
@@ -255,16 +256,64 @@
                 </div>
             </div>
         </div>
-        <div class="museum-section">
-            <div class="museum-overlay"></div>
-            <div class="museum-content">
-                <div class="museum-title">
-                    <div class="museum-play">
-                        <a href="#"><i class="fa-solid fa-play"></i></a><h4> Journey Museum</h4>
-                    </div>
+        <div class="map-section">
+            <div class="map-content">
+                <div class="map-title">
+                    <p>Explore the world of wayang</p>
+                    <h3>Wayang Museum</h3>
+                </div>
+                <div class="mapbox">
+                  <div id="map"></div>
+                  <small>Click on the marker to see the museum's name</small>
                 </div>
             </div>
         </div>
+        <footer>
+          <div class="footer-box">
+            <div class="footer-item">
+              <img src="images/logo/logo-white-width.png" alt="Logo Srimulat" width="200">
+              <p>
+                Srimulat is a website that provides information about Indonesian puppet culture. This website is made for the purpose of educating and promoting the diversity of Indonesian puppet arts to the wider global audience.
+              </p>
+            </div>
+            <div class="footer-item left">
+              <h3>Contact</h3>
+              <p>
+                <i class="fa-solid fa-map-marker"></i> Jl. Raya Bandung
+                No.100, Cibeunying, Kota
+                Bandung, Jawa Barat 40115
+              </p>
+              <p>
+                <i class="fa-solid fa-phone"></i> +62 22 2500080
+              </p>
+              <p>
+                <i class="fa-solid fa-envelope"></i> srimulat@gmail.com
+              </p>
+            </div>
+            <div class="footer-item right">
+              <h3>Follow Us</h3>
+              <div class="social-media">
+                <a href="">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <small>© 2023 Srimulat. All rights reserved.</small>
+          </div>
+        </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
     <script
       src="https://kit.fontawesome.com/d9b2e6872d.js"
       crossorigin="anonymous"

@@ -385,7 +385,7 @@ input:checked + .slider:before {
 }
 
 .hero-section .hero-footer {
-  padding: 20px;
+  padding: 50px 232px;
   z-index: 1;
 }
 
@@ -457,7 +457,7 @@ input:checked + .slider:before {
 } */
 
 /* Festival Section */
-.festival-section, .tokoh-section {
+.festival-section, .tokoh-section, .map-section {
     background-color: rgb(21, 28, 20, 1);
     width: 100%;
     min-height: 140vh;
@@ -471,18 +471,18 @@ input:checked + .slider:before {
   display: flex;
 }
 
-.festival-content .festival-title, .tokoh-content .tokoh-title {
+.festival-content .festival-title, .tokoh-content .tokoh-title, .map-content .map-title {
     width: 100%;
     padding: 60px;
 }
 
-.festival-content .festival-title h3, .tokoh-content .tokoh-title h3{
+.festival-content .festival-title h3, .tokoh-content .tokoh-title h3, .map-content .map-title h3 {
     color: #eeeeee;
     font-size: 50px;
     font-family: 'Mahameru-Medium';
 }
 
-.festival-content .festival-title p, .tokoh-content .tokoh-title p{
+.festival-content .festival-title p, .tokoh-content .tokoh-title p, .map-content .map-title p {
     color: #eeeeee;
     font-size: 14px;
 }
@@ -599,19 +599,19 @@ input:checked + .slider:before {
 }
 
 /* tokoh section */
-.tokoh-section {
+.tokoh-section, .map-section {
     margin-top: -440px;
     padding-bottom: 200px;
 }
 
-.tokoh-title {
+.tokoh-title, .map-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.tokoh-section .tokoh-content{
+.tokoh-section .tokoh-content, .map-section .map-content {
     width: 100%;
     margin-top: 170px;
     display: flex;
@@ -674,6 +674,101 @@ input:checked + .slider:before {
 }
 #tokoh3:hover {
     background: url('../images/dalang/Ki\ Manteb\ Soedharsono.jpg')no-repeat;
+}
+
+/* map section */
+
+.map-section {
+    margin-top: -200px;
+}
+
+.mapbox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#map {
+  height: 400px;
+  width: 1000px;
+  border-radius: 5px;
+}
+
+.mapbox small {
+  color: #eeeeee;
+  font-size: 12px;
+}
+
+/* footer */
+
+.footer-box {
+  width: 100%;
+  height: 100%;
+  background-color: #243122;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+
+.footer-box h3 {
+  color: #eeeeee;
+  font-size: 24px;
+  font-family: "Mahameru-Bold", sans-serif;
+}
+
+.footer-box p {
+  color: #eeeeee;
+  font-size: 12px;
+}
+
+.footer-box a {
+  text-decoration: none;
+  color: #eeeeee;
+  font-size: 12px;
+}
+
+.footer-box .footer-item {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-item.right {
+  width: 20%;
+}
+
+.footer-item.right .social-media {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  margin-left: -8px;
+}
+
+.social-media i {
+  font-size: 20px;
+}
+
+.social-media a {
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  border-radius: 5px;
+}
+
+.social-media a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
 /* Museum Section */
