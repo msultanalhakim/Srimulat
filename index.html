@@ -1,173 +1,294 @@
 <html>
-    <head>
-        <title>Indonesian Wayang</title>
-        <link rel="stylesheet" href="css/coba.css">
-    </head>
-    <body>
-            <nav id="navigation-bar">
-                <button id="nav-toggle" class="nav-toggle"><i class="fa-solid fa-list"></i></button>
-                <ul>
-                    <li><a href=""><img src="images/logo/logo-white-width.png" alt="Logo Srimulat"></a></li>
-                    <li class="hidden"><a href=""><img src="images/logo/logo-white-width.png" alt="Logo Srimulat"></a></li>
-                </ul>
-                <ul>
-                    <li><a href="">Beranda</a></li>
-                    <li><a href="">Festival</a></li>
-                    <li><a href="">Museum</a></li>
-                    <li><a href="">Tokoh</a></li>
-                    <li><a href="">Jelajahi</a></li>
-                </ul>
-                <ul>
-                    <li>
-                        <a onclick="dropdownNav();" class="nav-user"><i class="fa-solid fa-user"></i> <i class="fa-solid fa-caret-down"></i></a>
-                        <ul class="dropdown-content" id="dropdown-content">
-                            <li><a href="">Dropdown 1</a></li>
-                            <li><a href="">Dropdown 2</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider" onclick=""></span>
-                          </label>
-                    </li>
-                </ul>
-            </nav>
-        <div class="hero-section">
-            <div class="hero-overlay"></div>
+  <head>
+    <title>Indonesian Wayang</title>
+    <link rel="stylesheet" href="css/coba.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .hidden {
+        visibility: hidden;
+      }
+
+      .visible {
+        visibility: visible !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navigation-bar">
+      <button id="nav-toggle" class="nav-toggle">
+        <i class="fa-solid fa-list"></i>
+      </button>
+      <ul>
+        <li>
+          <a href=""
+            ><img src="images/logo/logo-white-width.png" alt="Logo Srimulat"
+          /></a>
+        </li>
+        <li class="hidden">
+          <a href=""
+            ><img src="images/logo/logo-white-width.png" alt="Logo Srimulat"
+          /></a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="">Beranda</a></li>
+        <li><a href="">Festival</a></li>
+        <li><a href="">Museum</a></li>
+        <li><a href="">Tokoh</a></li>
+        <li><a href="">Jelajahi</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a onclick="dropdownNav();" class="nav-user"
+            ><i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-caret-down"></i
+          ></a>
+          <ul class="dropdown-content" id="dropdown-content">
+            <li><a href="">Dropdown 1</a></li>
+            <li><a href="">Dropdown 2</a></li>
+          </ul>
+        </li>
+        <li>
+          <label class="switch">
+            <input id="checkbox" type="checkbox" onclick="toggleDarkMode()" />
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+    <div class="hero-section">
+      <div class="hero-overlay"></div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <div class="hero-content">
-                <div class="hero-title">
-                    <div class="title">
-                        <h1>Wayang Culture</h1>
-                        <p id="hero-paragraph"></p>
-                    </div>
+              <div class="hero-title">
+                <div class="title">
+                  <h1>Wayang Culture</h1>
+                  <p id="hero-paragraph"></p>
                 </div>
-                <div class="hero-slide">
-                    <div class="slide-selection"></div>
-                    <div class="slide-number">
-                        <ul>
-                            <li><a href="#"><label>01</label></a></li>
-                            <li><a href=""><label>02</label></a></li>
-                            <li><a href="" class="active"><label>03</label></a></li>
-                            <li><a href=""><label>04</label></a></li>
-                            <li><a href=""><label>05</label></a></li>
-                        </ul>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="hero-footer">
-                <div class="footer-container">
-                    <div class="footer-content">
-                        <p>What is good must be accepted, what is extraordinary must be kept secret.</p>
-                        <a href="#">Semar Punakawan</a>
-                    </div>
-                    <div class="footer-content">
-                        <p>Limited in actions, but no concern. The key is to find joy in laughter.</p>
-                        <a href="#">Bagong Punakawan</a>
-                    </div>
-                    <div class="footer-content">
-                        <p>Forget yourself at the meeting, even though you are young, you are yourself.</p>
-                        <a href="#">Petruk Punakawan</a>
-                    </div>
-                    <div class="footer-content">
-                        <p>Hoe only stops at water, never night, never stop, people are still upset and just quiet.</p>
-                        <a href="#">Gareng Punakawan</a>
-                    </div>
-                    <div class="footer-content">
-                        <p>Amidst the shadows of challenges, the light of resilience always finds its way.</p>
-                        <a href="#">Raden Rama Wijaya</a>
-                    </div>
-                    <div class="footer-content">
-                        <p>When the banana leaf falls, the stem is revealed.</p>
-                        <a href="#">Cepot Sunda</a>
-                    </div>
-                    <div class="footer-content">
-                        <p>Darkness cannot drive out darkness; only light can do that.</p>
-                        <a href="#">Rahwana</a>
-                    </div>
-                    <div class="footer-content">
-                        <p>When the celestial strings are plucked, cosmic melodies resonate.</p>
-                        <a href="#">Werkudara</a>
-                    </div>
-                    <div class="footer-content">
-                        <p>The dragon may soar, but the humble ant has its own path.</p>
-                        <a href="#">Liu Bei</a>
-                    </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero-content">
+              <div class="hero-title">
+                <div class="title">
+                  <h1>Indonesian Local Wisdom</h1>
+                  <p id="hero-paragraph">section 2</p>
                 </div>
-                <!-- <div class="footer-divider">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero-content">
+              <div class="hero-title">
+                <div class="title">
+                  <h1>Indonesian Cultural Heritage</h1>
+                  <p id="hero-paragraph">section 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero-content">
+              <div class="hero-title">
+                <div class="title">
+                  <h1>Moral Values of Life</h1>
+                  <p id="hero-paragraph">section 4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero-content">
+              <div class="hero-title">
+                <div class="title">
+                  <h1>Preserve Wayang</h1>
+                  <p id="hero-paragraph">section 5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="hero-footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <p>
+              What is good must be accepted, what is extraordinary must be kept
+              secret.
+            </p>
+            <a href="#">Semar Punakawan</a>
+          </div>
+          <div class="footer-content">
+            <p>
+              Limited in actions, but no concern. The key is to find joy in
+              laughter.
+            </p>
+            <a href="#">Bagong Punakawan</a>
+          </div>
+          <div class="footer-content">
+            <p>
+              Forget yourself at the meeting, even though you are young, you are
+              yourself.
+            </p>
+            <a href="#">Petruk Punakawan</a>
+          </div>
+          <div class="footer-content">
+            <p>
+              Hoe only stops at water, never night, never stop, people are still
+              upset and just quiet.
+            </p>
+            <a href="#">Gareng Punakawan</a>
+          </div>
+          <div class="footer-content">
+            <p>
+              Amidst the shadows of challenges, the light of resilience always
+              finds its way.
+            </p>
+            <a href="#">Raden Rama Wijaya</a>
+          </div>
+          <div class="footer-content">
+            <p>When the banana leaf falls, the stem is revealed.</p>
+            <a href="#">Cepot Sunda</a>
+          </div>
+          <div class="footer-content">
+            <p>Darkness cannot drive out darkness; only light can do that.</p>
+            <a href="#">Rahwana</a>
+          </div>
+          <div class="footer-content">
+            <p>
+              When the celestial strings are plucked, cosmic melodies resonate.
+            </p>
+            <a href="#">Werkudara</a>
+          </div>
+          <div class="footer-content">
+            <p>The dragon may soar, but the humble ant has its own path.</p>
+            <a href="#">Liu Bei</a>
+          </div>
+        </div>
+        <!-- <div class="footer-divider">
                     <div class="left-divider"></div>
                     <div class="right-divider"></div>
                 </div> -->
-            </div>
+      </div>
+    </div>
+    <div class="festival-section">
+      <div class="festival-content">
+        <div class="festival-title">
+          <p>Preserving Indonesia's traditions and culture of beauty</p>
+          <h3>Wayang Festival</h3>
+          <div class="festival-title-image">
+            <img src="images/wayang-wong.png" alt="Wayang Wong" width="120" />
+            <img src="images/wayang-wong.png" alt="Wayang Wong" width="120" />
+            <img src="images/wayang-wong.png" alt="Wayang Wong" width="120" />
+          </div>
         </div>
-        <div class="festival-section">
-            <div class="festival-content">
-                <div class="festival-title">
-                    <p>Preserving Indonesia's traditions and culture of beauty</p>
-                    <h3>Wayang Festival</h3>
-                    <div class="festival-title-image">
-                        <img src="images/wayang-wong.png" alt="Wayang Wong" width="120">
-                        <img src="images/wayang-wong.png" alt="Wayang Wong" width="120">
-                        <img src="images/wayang-wong.png" alt="Wayang Wong" width="120">
-                    </div>
-                </div>
-                <div class="festival-list">
-                    <div class="festival-event">
-                        <a href="">
-                            <div class="festival-event-head">
-                                <b>FEWANUSA IV</b>
-                                <p>03 October 2023</p>
-                            </div>
-                            <p>
-                                <i class="fa-solid fa-map-pin"></i> Lap. Segitiga Kota Sawahlunto<br>
-                                <i class="fa-solid fa-clock"></i> 20.00 - finish<br>
-                                <i class="fa-solid fa-user"></i> Kanastren Nereswara Darmanasti<br>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="festival-event">
-                        <a href="">
-                            <div class="festival-event-head">
-                                <b>Pagelaran Wayang Kulit</b>
-                                <p>14 Agustus 2023</p>
-                            </div>
-                            <p>
-                                <i class="fa-solid fa-map-pin"></i> Pelataran Gedung Kesehatan Unimus, Semarang<br>
-                                <i class="fa-solid fa-clock"></i> 19.00 - finish<br>
-                                <i class="fa-solid fa-user"></i> Ki Ketut Budiman, S.T.<br>
-                            </p>
-                        </a>
-                    </div>
-                    <div class="festival-event">
-                        <a href="">
-                            <div class="festival-event-head">
-                                <b>Pagelaran Wayang Wong</b>
-                                <p>29 Juni 2023</p>
-                            </div>
-                            <p>
-                                <i class="fa-solid fa-map-pin"></i> Taman Indonesia Kaya, Semarang<br>
-                                <i class="fa-solid fa-clock"></i> 22.00 - finish<br>
-                                <i class="fa-solid fa-user"></i> Mahasiswa Sumantri<br>
-                            </p>
-                        </a>
-                    </div>
-                    <a href="" class="festival-event-foot">
-                        See More >
-                    </a>
-                </div>
-            </div>
+        <div class="festival-list">
+          <div class="festival-event">
+            <a href="">
+              <div class="festival-event-head">
+                <b>FEWANUSA IV</b>
+                <p>03 October 2023</p>
+              </div>
+              <p>
+                <i class="fa-solid fa-map-pin"></i> Lap. Segitiga Kota
+                Sawahlunto<br />
+                <i class="fa-solid fa-clock"></i> 20.00 - finish<br />
+                <i class="fa-solid fa-user"></i> Kanastren Nereswara
+                Darmanasti<br />
+              </p>
+            </a>
+          </div>
+          <div class="festival-event">
+            <a href="">
+              <div class="festival-event-head">
+                <b>Pagelaran Wayang Kulit</b>
+                <p>14 Agustus 2023</p>
+              </div>
+              <p>
+                <i class="fa-solid fa-map-pin"></i> Pelataran Gedung Kesehatan
+                Unimus, Semarang<br />
+                <i class="fa-solid fa-clock"></i> 19.00 - finish<br />
+                <i class="fa-solid fa-user"></i> Ki Ketut Budiman, S.T.<br />
+              </p>
+            </a>
+          </div>
+          <div class="festival-event">
+            <a href="">
+              <div class="festival-event-head">
+                <b>Pagelaran Wayang Wong</b>
+                <p>29 Juni 2023</p>
+              </div>
+              <p>
+                <i class="fa-solid fa-map-pin"></i> Taman Indonesia Kaya,
+                Semarang<br />
+                <i class="fa-solid fa-clock"></i> 22.00 - finish<br />
+                <i class="fa-solid fa-user"></i> Mahasiswa Sumantri<br />
+              </p>
+            </a>
+          </div>
+          <a href="" class="festival-event-foot"> See More > </a>
         </div>
-        <div class="museum-section">
-            <div class="museum-overlay"></div>
-            <div class="museum-content">
-                <div class="museum-title">
-                    <div class="museum-play">
-                        <a href="#"><i class="fa-solid fa-play"></i></a><h4> Journey Museum</h4>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="museum-section">
+      <div class="museum-overlay"></div>
+      <div class="museum-content">
+        <div class="museum-title">
+          <div class="museum-play">
+            <a href="#"><i class="fa-solid fa-play"></i></a>
+            <h4>Journey Museum</h4>
+          </div>
         </div>
-        <script src="https://kit.fontawesome.com/d9b2e6872d.js" crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
-    </body>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/d9b2e6872d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        effect: "slide",
+        speed: 1000,
+        autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      })
+
+      function toggleDarkMode() {
+        var body = document.body
+        body.classList.toggle("dark-mode")
+
+        var overlay = document.querySelector(".hero-overlay")
+        var museumOverlay = document.querySelector(".museum-overlay")
+        var content = document.querySelector(".hero-content")
+        var checkbox = document.getElementById("checkbox")
+
+        if (checkbox.checked == true) {
+          overlay.classList.add("visible")
+          museumOverlay.classList.add("visible")
+        } else {
+          overlay.classList.remove("visible")
+          museumOverlay.classList.remove("visible")
+        }
+      }
+    </script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
