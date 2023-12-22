@@ -387,7 +387,7 @@
       </div>
     </footer>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="js/map.js"></script>
+    <!-- <script src="js/map.js"></script> -->
     <script
       src="https://kit.fontawesome.com/d9b2e6872d.js"
       crossorigin="anonymous"
@@ -409,6 +409,79 @@
           clickable: true,
         },
       })
+
+      // Daftar lokasi museum
+      var locations = [
+      ['Museum Wayang Jakarta', -6.175439, 106.825576],
+      ['Museum Wayang Banyumas', -7.48252, 109.23865],
+      ['Museum Wayang Kulit Wonogiri', -7.838262, 111.042282],
+      ['Museum Topeng dan Wayang Ubud', -8.503031, 115.264529],
+      ['Museum Gubug Wayang Mojokerto', -7.470497, 112.433159],
+      ['Galeri Wayang Purwakarta', -6.542849, 107.444451]
+      ];
+
+      // Batas peta
+      var bounds = [[5.15, 94], [-12, 120]];
+
+      // Dark mode tile layer
+      var darkMode = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+      subdomains: 'abcd',
+      maxZoom: 19
+      });
+
+      var lightMode = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      subdomains: 'abcd',
+      maxZoom: 19
+      });
+
+      // Inisialisasi peta
+      var map = L.map('map', {
+      layers: [darkMode],
+      maxBounds: bounds
+      }).setView([-7, 111], 7);
+
+      // Batasi zoom
+      map.options.maxBoundsViscosity = 1.0;
+
+      // Base layers
+      var baseLayers = {
+      "Dark Mode": darkMode,
+
+      "OpenStreetMap": lightMode
+      };
+
+      // Tambahkan control layer
+      L.control.layers(baseLayers).addTo(map);
+
+      // Loop dan tambahkan marker
+      function addMarkers() {
+        for (var i = 0; i < locations.length; i++) {
+          // Get koordinat
+          var lat = locations[i][1];
+          var lng = locations[i][2];
+
+          // Add marker
+          var marker = L.marker([lat, lng]).addTo(map);
+
+          // Popup text
+          var title = locations[i][0];
+          marker.bindPopup(title);
+        }
+      }
+
+      // Fungsi untuk memilih lapisan peta
+      function chooseTileLayer() {
+        var checkbox = document.getElementById("checkbox");
+
+        if (checkbox.checked) {
+          return darkMode;
+        } else {
+          return lightMode;
+        }
+      }
+
+      // Inisialisasi peta dan marker saat pertama kali dimuat
+      addMarkers();
 
       function toggleDarkMode() {
         var body = document.body
@@ -433,7 +506,15 @@
         var tulisanFooter = document.querySelectorAll("#tulisan-footer")
         var footerBox = document.querySelector(".footer-box")
 
+        // Hapus semua lapisan peta
+        map.eachLayer(function (layer) {
+          map.removeLayer(layer)
+        })
+        // Tambahkan kembali lapisan peta sesuai keadaan checkbox
+        chooseTileLayer().addTo(map);
+        
         if (checkbox.checked == true) {
+          map.addLayer(darkMode)
           overlay.classList.add("visible")
           festivalSection.classList.remove("lightMode")
           tokohSection.classList.remove("lightMode")
@@ -463,6 +544,7 @@
 
           footerBox.classList.remove("footerLight")
         } else {
+          map.addLayer(lightMode)
           overlay.classList.remove("visible")
           festivalSection.classList.add("lightMode")
           tokohSection.classList.add("lightMode")
@@ -491,6 +573,8 @@
           })
           footerBox.classList.add("footerLight")
         }
+        // Inisialisasi ulang marker
+        addMarkers();
       }
     </script>
     <script src="js/script.js"></script>

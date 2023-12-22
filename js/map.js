@@ -13,7 +13,11 @@ var bounds = [[5.15, 94], [-12, 120]];
 
 // Dark mode tile layer
 var darkMode = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://cartodb.com/attributions">CartoDB</a>',
+  subdomains: 'abcd',
+  maxZoom: 19
+});
+
+var lightMode = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   subdomains: 'abcd',
   maxZoom: 19
 });
@@ -31,9 +35,7 @@ map.options.maxBoundsViscosity = 1.0;
 var baseLayers = {
   "Dark Mode": darkMode,
 
-  "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    })
+  "OpenStreetMap": lightMode
 };
 
 // Tambahkan control layer
