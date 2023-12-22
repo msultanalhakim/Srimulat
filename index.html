@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="css/coba.css" />
+    <link rel="stylesheet" href="style.css" />
     <style>
       .visible {
         visibility: visible;
@@ -231,11 +231,11 @@
         /></a>
       </div>
       <ul id="content-navigation">
-        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#festival">Festival</a></li>
+        <li><a href="#wayang">Wayang</a></li>
+        <li><a href="#dalang">Dalang</a></li>
         <li><a href="#museum">Museum</a></li>
-        <li><a href="#tokoh">Tokoh</a></li>
-        <li><a href="#map-section">Jelajahi</a></li>
       </ul>
       <ul id="switch-navigation">
         <li>
@@ -251,7 +251,7 @@
         </li>
       </ul>
     </nav>
-    <div class="hero-section" id="beranda">
+    <div class="hero-section" id="home">
       <!-- Swiper -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -456,7 +456,7 @@
       </div>
       <div class="festival-divider"></div>
     </div>
-    <div class="wayang-section">
+    <div class="wayang-section" id="wayang">
       <div class="wayang-content">
         <div class="wayang-title">
           <p>Indonesian puppet culture</p>
@@ -501,7 +501,7 @@
       </div>
     </div>
     <div class="tokoh-section">
-      <div class="tokoh-content" id="tokoh">
+      <div class="tokoh-content" id="dalang">
         <div class="tokoh-title">
           <p>Master storytellers behind the shadow puppet magic</p>
           <h3 id="tokoh-title">Dalang Legends</h3>
@@ -538,8 +538,8 @@
         </div>
       </div>
     </div>
-    <div class="map-section" id="map-section">
-      <div class="map-content" id="museum">
+    <div class="map-section" id="museum">
+      <div class="map-content">
         <div class="map-title">
           <p>Explore the world of wayang</p>
           <h3 id="map-title">Wayang Museum</h3>
@@ -602,7 +602,6 @@
       </div>
     </footer>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="js/map.js"></script>
     <script
       src="https://kit.fontawesome.com/d9b2e6872d.js"
       crossorigin="anonymous"
@@ -920,6 +919,6 @@
         addMarkers()
       }
     </script>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
