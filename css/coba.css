@@ -276,6 +276,7 @@ input:checked + .slider:before {
     rgb(21, 28, 20, 1)
   );
   z-index: 0;
+  pointer-events: none;
 }
 
 .hero-section .hero-content {
@@ -457,12 +458,14 @@ input:checked + .slider:before {
 } */
 
 /* Festival Section */
-.festival-section, .tokoh-section, .map-section {
-    background-color: rgb(21, 28, 20, 1);
-    width: 100%;
-    min-height: 140vh;
-    z-index: 0;
-    padding: 40px 122px;
+.festival-section,
+.tokoh-section,
+.map-section {
+  background-color: rgb(21, 28, 20, 1);
+  width: 100%;
+  min-height: 140vh;
+  z-index: 0;
+  padding: 40px 122px;
 }
 
 .festival-section .festival-content {
@@ -471,20 +474,26 @@ input:checked + .slider:before {
   display: flex;
 }
 
-.festival-content .festival-title, .tokoh-content .tokoh-title, .map-content .map-title {
-    width: 100%;
-    padding: 60px;
+.festival-content .festival-title,
+.tokoh-content .tokoh-title,
+.map-content .map-title {
+  width: 100%;
+  padding: 60px;
 }
 
-.festival-content .festival-title h3, .tokoh-content .tokoh-title h3, .map-content .map-title h3 {
-    color: #eeeeee;
-    font-size: 50px;
-    font-family: 'Mahameru-Medium';
+.festival-content .festival-title h3,
+.tokoh-content .tokoh-title h3,
+.map-content .map-title h3 {
+  color: #eeeeee;
+  font-size: 50px;
+  font-family: "Mahameru-Medium";
 }
 
-.festival-content .festival-title p, .tokoh-content .tokoh-title p, .map-content .map-title p {
-    color: #eeeeee;
-    font-size: 14px;
+.festival-content .festival-title p,
+.tokoh-content .tokoh-title p,
+.map-content .map-title p {
+  color: #eeeeee;
+  font-size: 14px;
 }
 
 .festival-content .festival-title .festival-title-image {
@@ -494,28 +503,28 @@ input:checked + .slider:before {
 }
 
 .festival-content .festival-title .festival-title-image img {
-    width: 120px;
-    height: 80px;
-    border-radius: 5px;
+  width: 120px;
+  height: 80px;
+  border-radius: 5px;
 }
 
-.festival-content .festival-list{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    color: #eeeeee;
-    font-size: 12px;
+.festival-content .festival-list {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  color: #eeeeee;
+  font-size: 12px;
 }
 
-.festival-list .festival-event{
-    -webkit-transition: .3s;
-    transition: .3s;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    margin: 5px 0;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
+.festival-list .festival-event {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
 }
 
 .festival-list .festival-event a {
@@ -523,8 +532,8 @@ input:checked + .slider:before {
   color: #eeeeee;
 }
 
-.festival-list .festival-event:hover{
-    transform: scale(1.02);
+.festival-list .festival-event:hover {
+  transform: scale(1.02);
 }
 
 .festival-list .festival-event .festival-event-head {
@@ -599,87 +608,90 @@ input:checked + .slider:before {
 }
 
 /* tokoh section */
-.tokoh-section, .map-section {
-    margin-top: -440px;
-    padding-bottom: 200px;
+.tokoh-section,
+.map-section {
+  margin-top: -440px;
+  padding-bottom: 200px;
 }
 
-.tokoh-title, .map-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.tokoh-title,
+.map-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.tokoh-section .tokoh-content, .map-section .map-content {
-    width: 100%;
-    margin-top: 170px;
-    display: flex;
-    flex-direction: column;
+.tokoh-section .tokoh-content,
+.map-section .map-content {
+  width: 100%;
+  margin-top: 170px;
+  display: flex;
+  flex-direction: column;
 }
 
 .tokoh-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .tokoh-list .tokoh {
-    width: 300px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    padding-bottom: 10px;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 10px;
 }
 
 .tokoh p {
-    color: #eeeeee;
-    font-size: 20px;
-    font-family: 'Mahameru-Regular';
+  color: #eeeeee;
+  font-size: 20px;
+  font-family: "Mahameru-Regular";
 }
 
 .tokoh:hover p {
-    display: none;
+  display: none;
 }
 
 #tokoh1 {
-    background: url('../images/dalang/Ki\ Suparman.png')no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    position: relative;
+  background: url("../images/dalang/Ki\ Suparman.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  position: relative;
 }
 #tokoh1:hover {
-    background: url('../images/dalang/Ki\ Suparman.jpg')no-repeat;
+  background: url("../images/dalang/Ki\ Suparman.jpg") no-repeat;
 }
 
 #tokoh2 {
-    background: url('../images/dalang/Ki\ Narto\ Sabdo.png')no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    position: relative;
+  background: url("../images/dalang/Ki\ Narto\ Sabdo.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  position: relative;
 }
 #tokoh2:hover {
-    background: url('../images/dalang/Ki\ Narto\ Sabdo.jpg')no-repeat;
+  background: url("../images/dalang/Ki\ Narto\ Sabdo.jpg") no-repeat;
 }
 
 #tokoh3 {
-    background: url('../images/dalang/Ki\ Manteb\ Soedharsono.png')no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    position: relative;
+  background: url("../images/dalang/Ki\ Manteb\ Soedharsono.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  position: relative;
 }
 #tokoh3:hover {
-    background: url('../images/dalang/Ki\ Manteb\ Soedharsono.jpg')no-repeat;
+  background: url("../images/dalang/Ki\ Manteb\ Soedharsono.jpg") no-repeat;
 }
 
 /* map section */
 
 .map-section {
-    margin-top: -200px;
+  margin-top: -200px;
 }
 
 .mapbox {
@@ -842,9 +854,10 @@ input:checked + .slider:before {
 
 /* swiper */
 .swiper {
+  position: relative;
   width: 100%;
   height: 100%;
-  z-index: -1 !important;
+  z-index: 0 !important;
 }
 
 .swiper-slide {
