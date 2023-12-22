@@ -738,6 +738,7 @@ input:checked + .slider:before {
 }
 
 .festival-content .festival-title h3,
+.wayang-content .wayang-title h3,
 .tokoh-content .tokoh-title h3,
 .map-content .map-title h3 {
   color: #eeeeee;
@@ -746,6 +747,7 @@ input:checked + .slider:before {
 }
 
 .festival-content .festival-title p,
+.wayang-content .wayang-title p,
 .tokoh-content .tokoh-title p,
 .map-content .map-title p {
   color: #eeeeee;
@@ -762,6 +764,13 @@ input:checked + .slider:before {
   width: 120px;
   height: 80px;
   border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.festival-content .festival-title .festival-title-image img:hover {
+  transform: scale(1.1);
 }
 
 .festival-content .festival-title .festival-image-display{
@@ -771,7 +780,7 @@ input:checked + .slider:before {
   background:url('../images/wayang-wong.png') no-repeat;
   background-size: cover;
   background-position: center;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .festival-content .festival-list {
@@ -794,9 +803,39 @@ input:checked + .slider:before {
   padding: 10px 20px;
 }
 
-.festival-list .festival-event a {
+.festival-event .festival-event-foot {
+  display: flex;
+  justify-content: end;
+}
+
+.festival-event .festival-event-foot .event-detail {
   text-decoration: none;
   color: #eeeeee;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 7px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.festival-event .festival-event-foot .event-detail:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.popup-event {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-event img {
+  width: fit-content;
+  height: 80vh;
+  object-fit: cover;
 }
 
 .festival-list .festival-event:hover {
@@ -1014,6 +1053,57 @@ input:checked + .slider:before {
   .festival-section .festival-content .festival-title .festival-image-display{
     width: 100%;
   }
+}
+
+/* wayang section */
+.wayang-section .wayang-content {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #151c14;
+  padding: 20px 122px;
+  color: #eeeeee;
+}
+
+.wayang-section .wayang-gallery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-top: 40px;
+}
+
+.wayang-gallery .wayang-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wayang-gallery .wayang-left img {
+  width: 42px;
+  height: auto;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+.wayang-gallery .wayang-left img:hover {
+  transform: scale(1.1);
+}
+
+.wayang-gallery .wayang-left b {
+  font-size: 28px;
+  font-family: "Mahameru-Bold";
+}
+
+.wayang-gallery .wayang-left p {
+  font-size: 14px;
+}
+
+.wayang-gallery .wayang-right img {
+  width: 450px;
+  height: auto;
+  margin-top: -40px;
 }
 
 /* tokoh section */
