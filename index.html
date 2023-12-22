@@ -44,7 +44,7 @@
   </head>
   <body>
     <nav id="navigation-bar">
-      <button id="nav-toggle" class="nav-toggle">
+      <button id="nav-toggle" class="nav-toggle" style="display: none;">
         <i class="fa-solid fa-list"></i>
       </button>
       <ul>
@@ -67,16 +67,6 @@
         <li><a href="">Jelajahi</a></li>
       </ul>
       <ul>
-        <li>
-          <a onclick="dropdownNav();" class="nav-user"
-            ><i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-caret-down"></i
-          ></a>
-          <ul class="dropdown-content" id="dropdown-content">
-            <li><a href="">Dropdown 1</a></li>
-            <li><a href="">Dropdown 2</a></li>
-          </ul>
-        </li>
         <li>
           <label class="switch">
             <input
@@ -116,9 +106,9 @@
           </div>
           <div class="swiper-slide">
             <div class="hero-content">
-              <div class="hero-title" style="width: 100%">
+              <div class="hero-title">
                 <div class="title">
-                  <h1>Indonesian Cultural Heritage</h1>
+                  <h1>Cultural Heritage</h1>
                   <p id="hero-paragraph-3"></p>
                 </div>
               </div>
@@ -224,6 +214,8 @@
               src="https://pariwisata-arsip.bantulkab.go.id/filestorage/berita/2016/05/tn610/tn610_IMG_9140.JPG"
             />
           </div>
+          <div class="festival-image-display">
+          </div>
         </div>
         <div class="festival-list">
           <div class="festival-event">
@@ -269,7 +261,27 @@
               </p>
             </a>
           </div>
+          <div class="festival-event">
+            <a href="">
+              <div class="festival-event-head">
+                <b>Pagelaran Wayang Wong</b>
+                <p>29 Juni 2023</p>
+              </div>
+              <p>
+                <i class="fa-solid fa-map-pin"></i> Taman Indonesia Kaya,
+                Semarang<br />
+                <i class="fa-solid fa-clock"></i> 22.00 - finish<br />
+                <i class="fa-solid fa-user"></i> Mahasiswa Sumantri<br />
+              </p>
+            </a>
+          </div>
           <a href="" class="festival-event-foot"> See More > </a>
+        </div>
+      </div>
+      <div class="divider-section">
+        <div class="divider-content">
+          <img src="images/logo/logo-white-width.png" alt="">
+          <span>Preserve Indonesian culture and heritage</span>
         </div>
       </div>
     </div>
@@ -280,14 +292,33 @@
           <h3 id="tokoh-title">Dalang Legends</h3>
         </div>
         <div class="tokoh-list">
-          <div id="tokoh1" class="tokoh">
+          <div class="tokoh">
+            <img src="images/dalang/Ki Suparman.jpg" alt="Tokoh">
             <p>Ki Suparman</p>
           </div>
-          <div id="tokoh2" class="tokoh">
+          <div class="tokoh">
+          <img src="images/dalang/Ki Narto Sabdo.jpg" alt="Tokoh">
             <p>Ki Narto Sabdo</p>
           </div>
-          <div id="tokoh3" class="tokoh">
+          <div class="tokoh">
+          <img src="images/dalang/Ki Manteb Soedharsono.jpg" alt="Tokoh">
             <p>Ki Manteb Soedharsono</p>
+          </div>
+          <div class="tokoh">
+            <img src="images/dalang/Ki Sorwedi.jpg" alt="Tokoh">
+            <p>Ki Sorwedi</p>
+          </div>
+          <div class="tokoh">
+          <img src="images/dalang/Ki Slamet Gundono.jpg" alt="Tokoh">
+            <p>Ki Slamet Gundono</p>
+          </div>
+          <div class="tokoh">
+          <img src="images/dalang/Ki Cecep Supriyadi.jpg" alt="Tokoh">
+            <p>Ki Cecep Supriyadi</p>
+          </div>
+          <div class="tokoh">
+          <img src="images/dalang/Ki Anom Suroto.jpg" alt="Tokoh">
+            <p>Ki Anam Suroto</p>
           </div>
         </div>
       </div>
@@ -312,7 +343,7 @@
             alt="Logo Srimulat"
             width="200"
           />
-          <p id="tulisan-footer">
+          <p class="paragraph-footer-left" id="tulisan-footer">
             Srimulat is a website that provides information about Indonesian
             puppet culture. This website is made for the purpose of educating
             and promoting the diversity of Indonesian puppet arts to the wider
@@ -366,7 +397,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
+      let swiper = new Swiper(".mySwiper", {
         direction: "vertical",
         effect: "slide",
         speed: 1000,

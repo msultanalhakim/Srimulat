@@ -1,33 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  function navbarSticky() {
-    const navigationBar = document.getElementById("navigation-bar")
-    const windowHeight = 840
-    let isSticky = false
-
-    function handleScroll() {
-      const shouldBeSticky = window.scrollY > windowHeight
-      if (shouldBeSticky !== isSticky) {
-        isSticky = shouldBeSticky
-        if (isSticky) {
-          navigationBar.classList.add("sticky")
-        } else {
-          navigationBar.classList.add("slide-up")
-          navigationBar.classList.remove("sticky")
-          setTimeout(function () {
-            navigationBar.classList.remove("slide-up")
-          }, 500) // Adjust according to the animation duration
-        }
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-  }
-
-  navbarSticky() // Calling navbarSticky directly without the need for an extra event listener
-  window.addEventListener("scroll", navbarSticky()) // Adding a scroll event listener directly to navbarSticky function
-})
-
-document.addEventListener("DOMContentLoaded", function () {
   let i = 0
   let texts = [
     "A cherished cultural gem of Indonesia,",

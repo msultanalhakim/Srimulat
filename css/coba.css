@@ -48,7 +48,6 @@ nav {
   left: 0;
   right: 0;
   margin: auto;
-  border-bottom: 2px solid rgb(118, 118, 118, 0.3);
   padding: 20px 0px 10px;
   display: flex;
   align-items: center;
@@ -288,26 +287,23 @@ input:checked + .slider:before {
 }
 
 .hero-content .hero-title {
-  display: inline-block;
-  width: 70%;
+  width: 55%;
   height: 100%;
   margin: 0;
   padding: 0;
-}
+  }
 
 .hero-content .hero-title .title {
-  display: block;
-  margin: 170px 0;
-  padding: 100px;
-  align-items: center;
+  margin: 200px 0;
   padding: 20px;
 }
 
 .title h1 {
-  font-size: 120px;
+  text-align: left;
+  font-size: 95px;
   font-family: "Mahameru-Bold", sans-serif;
   font-weight: 800;
-  line-height: 130px;
+  line-height: 100px;
   color: #eeeeee;
   user-select: none;
   width: 100%;
@@ -315,7 +311,7 @@ input:checked + .slider:before {
 }
 
 .title p {
-  padding: 0 20px;
+  text-align: left;
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   color: #aebd92;
@@ -416,6 +412,7 @@ input:checked + .slider:before {
 
 .hero-section .footer-container::-webkit-scrollbar {
   height: 6px;
+  background-color:rgba(0, 0, 0, 0.3);
 }
 
 .hero-footer .footer-content {
@@ -458,14 +455,30 @@ input:checked + .slider:before {
 } */
 
 /* Festival Section */
-.festival-section,
-.tokoh-section,
-.map-section {
-  background-color: rgb(21, 28, 20, 1);
+.festival-section {
+  background-color: #151c14;
   width: 100%;
-  min-height: 140vh;
+  min-height: 30vh;
   z-index: 0;
-  padding: 40px 122px;
+  padding: 60px 122px;
+}
+
+.tokoh-section {
+  background: url('../images/4409096.jpg');
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  min-height: 132vh;
+  z-index: 0;
+  padding: 20px 122px;
+}
+
+.map-section {
+  background-color: #081601;
+  width: 100%;
+  min-height: 70vh;
+  z-index: 0;
+  padding: 10px 122px 80px;
 }
 
 .festival-section .festival-content {
@@ -478,7 +491,7 @@ input:checked + .slider:before {
 .tokoh-content .tokoh-title,
 .map-content .map-title {
   width: 100%;
-  padding: 60px;
+  padding: 30px;
 }
 
 .festival-content .festival-title h3,
@@ -508,12 +521,22 @@ input:checked + .slider:before {
   border-radius: 5px;
 }
 
+.festival-content .festival-title .festival-image-display{
+  margin: 20px 0px;
+  width: 90%;
+  height: 400px;
+  background:url('../images/wayang-wong.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .festival-content .festival-list {
   width: 70%;
   display: flex;
   flex-direction: column;
   color: #eeeeee;
   font-size: 12px;
+  margin: auto;
 }
 
 .festival-list .festival-event {
@@ -521,7 +544,7 @@ input:checked + .slider:before {
   transition: 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  margin: 5px 0;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
@@ -608,12 +631,6 @@ input:checked + .slider:before {
 }
 
 /* tokoh section */
-.tokoh-section,
-.map-section {
-  margin-top: -440px;
-  padding-bottom: 200px;
-}
-
 .tokoh-title,
 .map-title {
   display: flex;
@@ -622,37 +639,86 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
+/* Divider Section */
+.divider-section{
+  margin: 20px auto 0px;
+  width: 80%;
+  height: 6vh;
+  background:linear-gradient(to right, #36452e, #243122, #151c14);
+  padding: 8px;
+  border-radius: 2px;
+}
+
+.divider-content{
+  width: 100%;
+  height: 100%;
+}
+
+.divider-content img{
+  height: 100%;
+  float: left;
+}
+
+.divider-content span{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  float: right;
+  color: #eeeeee;
+}
+
 .tokoh-section .tokoh-content,
 .map-section .map-content {
   width: 100%;
-  margin-top: 170px;
   display: flex;
   flex-direction: column;
 }
 
 .tokoh-list {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  display: block;
 }
 
 .tokoh-list .tokoh {
-  width: 300px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  padding-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  padding: 8px;
 }
 
-.tokoh p {
+.tokoh-list .tokoh p {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
   color: #eeeeee;
-  font-size: 20px;
+  font-size: 18px;
+  padding: 6px;
   font-family: "Mahameru-Regular";
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.tokoh-list .tokoh img{
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  filter: brightness(40%);
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .tokoh:hover p {
-  display: none;
+  opacity: 0;
+}
+
+.tokoh:hover img{
+  transform: scale(1.1);
+  filter: brightness(100%);
 }
 
 #tokoh1 {
@@ -689,10 +755,6 @@ input:checked + .slider:before {
 }
 
 /* map section */
-
-.map-section {
-  margin-top: -200px;
-}
 
 .mapbox {
   width: 100%;
@@ -735,6 +797,10 @@ input:checked + .slider:before {
 .footer-box p {
   color: #eeeeee;
   font-size: 12px;
+}
+
+.paragraph-footer-left{
+  padding: 12px;
 }
 
 .footer-box a {
