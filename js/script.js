@@ -35,6 +35,19 @@ document.addEventListener("DOMContentLoaded", function () {
   typeWriter()
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.getElementById("nav-toggle");
+  const navigationBar = document.getElementById("content-navigation");
+  const switchBar = document.getElementById("switch-navigation");
+  const widthLogo = document.getElementById("width-logo");
+
+  navToggle.addEventListener("click", function() {
+    // Toggle a CSS class to show/hide the navigation bar or use any other logic you prefer
+    navigationBar.classList.toggle("show-navigation");
+    switchBar.classList.toggle("show-navigation");
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   let i = 0
   let texts = [
@@ -181,18 +194,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   typeWriter()
 })
-
-function dropdownNav() {
-  let currentClick = 0
-  const navToggle = document.querySelector(".nav-user")
-  const navList = document.getElementById("dropdown-content")
-
-  navToggle.addEventListener("click", function () {
-    if (currentClick == 0) {
-      navList.classList.add("show")
-    } else if (currentClick == 1) {
-      navList.classList.remove("show")
-      currentClick = 0
-    }
-  })
-}

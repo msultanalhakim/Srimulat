@@ -1,498 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Srimulat | Indonesian Puppet Culture</title>
-    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="css/coba.css" />
-    <style>
-      .hidden {
-        visibility: hidden;
-      }
-      .visible {
-        visibility: visible !important;
-      }
-      .lightMode {
-        background-color: #eeeeee;
-        color: #151c14 !important;
-      }
 
-      .black {
-        color: #151c14 !important;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srimulat | Indonesian Puppet Culture</title>
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/coba.css" />
+  <style>
+    .hidden {
+      visibility: hidden;
+    }
 
-      .darkGreen {
-        color: #243122 !important;
-      }
-      .border {
-        border: 1px solid #151c14 !important;
-      }
+    .visible {
+      visibility: visible !important;
+    }
 
-      .footerLight {
-        background-color: #aebd92;
-      }
-    </style>
-  </head>
-  <body>
-    <nav id="navigation-bar">
-      <button id="nav-toggle" class="nav-toggle" style="display: none;">
+    .lightMode {
+      background-color: #f6d27a;
+      color: #151c14 !important;
+    }
+
+    .lightLegends {
+      background-color: #f2c165;
+    }
+
+    .black {
+      color: #151c14 !important;
+    }
+
+    .darkGreen {
+      color: #243122 !important;
+    }
+
+    .border {
+      border: 1px solid #151c14 !important;
+    }
+
+    .footerLight {
+      background-color: #aebd92;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navigation-bar">
+    <div class="navigation-panel">
+      <button id="nav-toggle" class="nav-toggle">
         <i class="fa-solid fa-list"></i>
       </button>
-      <ul>
-        <li>
-          <a href=""
-            ><img src="images/logo/logo-white-width.png" alt="Logo Srimulat"
-          /></a>
-        </li>
-        <li class="hidden">
-          <a href=""
-            ><img src="images/logo/logo-white-width.png" alt="Logo Srimulat"
-          /></a>
-        </li>
-      </ul>
-      <ul>
-        <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#festival">Festival</a></li>
-        <li><a href="#museum">Museum</a></li>
-        <li><a href="#tokoh">Tokoh</a></li>
-        <li><a href="">Jelajahi</a></li>
-      </ul>
-      <ul>
-        <li>
-          <label class="switch">
-            <input
-              id="checkbox"
-              type="checkbox"
-              checked
-              onclick="toggleDarkMode()"
-            />
-            <span class="slider"></span>
-          </label>
-        </li>
-      </ul>
-    </nav>
-    <div class="hero-section" id="beranda">
-      <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="hero-content">
-              <div class="hero-title">
-                <div class="title">
-                  <h1>Wayang Culture</h1>
-                  <p id="hero-paragraph-1"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="hero-content">
-              <div class="hero-title">
-                <div class="title">
-                  <h1>Indonesian Local Wisdom</h1>
-                  <p id="hero-paragraph-2"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="hero-content">
-              <div class="hero-title">
-                <div class="title">
-                  <h1>Cultural Heritage</h1>
-                  <p id="hero-paragraph-3"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="hero-content">
-              <div class="hero-title">
-                <div class="title">
-                  <h1>Culture and Moral Values</h1>
-                  <p id="hero-paragraph-4"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="hero-content">
-              <div class="hero-title">
-                <div class="title">
-                  <h1>Cultural Diversity</h1>
-                  <p id="hero-paragraph-5"></p>
-                </div>
+      <a href="" class="width-logo"><img src="images/logo/logo-white-width.png" alt="Logo Srimulat" /></a>
+      <a href="" class="small-logo"><img src="images/logo/logo-white.png" alt="Logo Srimulat" /></a>
+    </div>
+    <ul id="content-navigation">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#festival">Festival</a></li>
+      <li><a href="#museum">Museum</a></li>
+      <li><a href="#tokoh">Tokoh</a></li>
+      <li><a href="#map-section">Jelajahi</a></li>
+    </ul>
+    <ul id="switch-navigation">
+      <li>
+        <label class="switch">
+          <input id="checkbox" type="checkbox" checked onclick="toggleDarkMode()" />
+          <span class="slider"></span>
+        </label>
+      </li>
+    </ul>
+  </nav>
+  <div class="hero-section" id="beranda">
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="hero-content">
+            <div class="hero-title">
+              <div class="title">
+                <h1>Wayang Culture</h1>
+                <p id="hero-paragraph-1"></p>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-slide">
+          <div class="hero-content">
+            <div class="hero-title">
+              <div class="title">
+                <h1>Indonesian Local Wisdom</h1>
+                <p id="hero-paragraph-2"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-content">
+            <div class="hero-title">
+              <div class="title">
+                <h1>Cultural Heritage</h1>
+                <p id="hero-paragraph-3"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-content">
+            <div class="hero-title">
+              <div class="title">
+                <h1>Culture and Moral Values</h1>
+                <p id="hero-paragraph-4"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="hero-content">
+            <div class="hero-title">
+              <div class="title">
+                <h1>Cultural Diversity</h1>
+                <p id="hero-paragraph-5"></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hero-footer">
-        <div class="footer-container">
-          <div class="footer-content" id="footer-content">
-            <p>
-              What is good must be accepted, what is extraordinary must be kept
-              secret.
-            </p>
-            <a href="#" id="hero-footer">Semar Punakawan</a>
-          </div>
-          <div class="footer-content">
-            <p>
-              Limited in actions, but no concern. The key is to find joy in
-              laughter.
-            </p>
-            <a href="#" id="hero-footer">Bagong Punakawan</a>
-          </div>
-          <div class="footer-content">
-            <p>
-              Forget yourself at the meeting, even though you are young, you are
-              yourself.
-            </p>
-            <a href="#" id="hero-footer">Petruk Punakawan</a>
-          </div>
-          <div class="footer-content">
-            <p>
-              Hoe only stops at water, never night, never stop, people are still
-              upset and just quiet.
-            </p>
-            <a href="#" id="hero-footer">Gareng Punakawan</a>
-          </div>
-          <div class="footer-content">
-            <p>
-              Amidst the shadows of challenges, the light of resilience always
-              finds its way.
-            </p>
-            <a href="#" id="hero-footer">Raden Rama Wijaya</a>
-          </div>
-          <div class="footer-content">
-            <p>When the banana leaf falls, the stem is revealed.</p>
-            <a href="#" id="hero-footer">Cepot Sunda</a>
-          </div>
-          <div class="footer-content">
-            <p>Darkness cannot drive out darkness; only light can do that.</p>
-            <a href="#" id="hero-footer">Rahwana</a>
-          </div>
-          <div class="footer-content">
-            <p>
-              When the celestial strings are plucked, cosmic melodies resonate.
-            </p>
-            <a href="#" id="hero-footer">Werkudara</a>
-          </div>
-          <div class="footer-content">
-            <p>The dragon may soar, but the humble ant has its own path.</p>
-            <a href="#" id="hero-footer">Liu Bei</a>
-          </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="hero-footer">
+      <div class="footer-container">
+        <div class="footer-content" id="footer-content">
+          <p>
+            What is good must be accepted, what is extraordinary must be kept
+            secret.
+          </p>
+          <a href="#" id="hero-footer">Semar Punakawan</a>
         </div>
-        <!-- <div class="footer-divider">
+        <div class="footer-content">
+          <p>
+            Limited in actions, but no concern. The key is to find joy in
+            laughter.
+          </p>
+          <a href="#" id="hero-footer">Bagong Punakawan</a>
+        </div>
+        <div class="footer-content">
+          <p>
+            Forget yourself at the meeting, even though you are young, you are
+            yourself.
+          </p>
+          <a href="#" id="hero-footer">Petruk Punakawan</a>
+        </div>
+        <div class="footer-content">
+          <p>
+            Hoe only stops at water, never night, never stop, people are still
+            upset and just quiet.
+          </p>
+          <a href="#" id="hero-footer">Gareng Punakawan</a>
+        </div>
+        <div class="footer-content">
+          <p>
+            Amidst the shadows of challenges, the light of resilience always
+            finds its way.
+          </p>
+          <a href="#" id="hero-footer">Raden Rama Wijaya</a>
+        </div>
+        <div class="footer-content">
+          <p>When the banana leaf falls, the stem is revealed.</p>
+          <a href="#" id="hero-footer">Cepot Sunda</a>
+        </div>
+        <div class="footer-content">
+          <p>Darkness cannot drive out darkness; only light can do that.</p>
+          <a href="#" id="hero-footer">Rahwana</a>
+        </div>
+        <div class="footer-content">
+          <p>
+            When the celestial strings are plucked, cosmic melodies resonate.
+          </p>
+          <a href="#" id="hero-footer">Werkudara</a>
+        </div>
+        <div class="footer-content">
+          <p>The dragon may soar, but the humble ant has its own path.</p>
+          <a href="#" id="hero-footer">Liu Bei</a>
+        </div>
+      </div>
+      <!-- <div class="footer-divider">
                     <div class="left-divider"></div>
                     <div class="right-divider"></div>
                 </div> -->
-      </div>
-      <div class="hero-overlay"></div>
     </div>
-    <div class="festival-section" id="festival-section">
-      <div class="festival-content" id="festival">
-        <div class="festival-title">
-          <p>Preserving Indonesia's traditions and culture of beauty</p>
-          <h3 id="festival-title">Wayang Festival</h3>
-          <div class="festival-title-image">
-            <img src="images/wayang-wong.png" />
-            <img
-              src="https://asset-2.tstatic.net/jogja/foto/bank/images/sleman-city-hall-gelar-budaya-pagelaran-wayang-kulit.jpg"
-            />
-            <img
-              src="https://pariwisata-arsip.bantulkab.go.id/filestorage/berita/2016/05/tn610/tn610_IMG_9140.JPG"
-            />
-          </div>
-          <div class="festival-image-display">
-          </div>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="festival-section" id="festival-section">
+    <div class="festival-content" id="festival">
+      <div class="festival-title">
+        <p>Preserving Indonesia's traditions and culture of beauty</p>
+        <h3 id="festival-title">Wayang Festival</h3>
+        <div class="festival-title-image">
+          <img src="images/wayang-wong.png" />
+          <img
+            src="https://asset-2.tstatic.net/jogja/foto/bank/images/sleman-city-hall-gelar-budaya-pagelaran-wayang-kulit.jpg" />
+          <img src="https://pariwisata-arsip.bantulkab.go.id/filestorage/berita/2016/05/tn610/tn610_IMG_9140.JPG" />
         </div>
-        <div class="festival-list">
-          <div class="festival-event">
-            <a href="">
-              <div class="festival-event-head">
-                <b>FEWANUSA IV</b>
-                <p>03 October 2023</p>
-              </div>
-              <p>
-                <i class="fa-solid fa-map-pin"></i> Lap. Segitiga Kota
-                Sawahlunto<br />
-                <i class="fa-solid fa-clock"></i> 20.00 - finish<br />
-                <i class="fa-solid fa-user"></i> Kanastren Nereswara
-                Darmanasti<br />
-              </p>
-            </a>
-          </div>
-          <div class="festival-event">
-            <a href="">
-              <div class="festival-event-head">
-                <b>Pagelaran Wayang Kulit</b>
-                <p>14 Agustus 2023</p>
-              </div>
-              <p>
-                <i class="fa-solid fa-map-pin"></i> Pelataran Gedung Kesehatan
-                Unimus, Semarang<br />
-                <i class="fa-solid fa-clock"></i> 19.00 - finish<br />
-                <i class="fa-solid fa-user"></i> Ki Ketut Budiman, S.T.<br />
-              </p>
-            </a>
-          </div>
-          <div class="festival-event">
-            <a href="">
-              <div class="festival-event-head">
-                <b>Pagelaran Wayang Wong</b>
-                <p>29 Juni 2023</p>
-              </div>
-              <p>
-                <i class="fa-solid fa-map-pin"></i> Taman Indonesia Kaya,
-                Semarang<br />
-                <i class="fa-solid fa-clock"></i> 22.00 - finish<br />
-                <i class="fa-solid fa-user"></i> Mahasiswa Sumantri<br />
-              </p>
-            </a>
-          </div>
-          <div class="festival-event">
-            <a href="">
-              <div class="festival-event-head">
-                <b>Pagelaran Wayang Wong</b>
-                <p>29 Juni 2023</p>
-              </div>
-              <p>
-                <i class="fa-solid fa-map-pin"></i> Taman Indonesia Kaya,
-                Semarang<br />
-                <i class="fa-solid fa-clock"></i> 22.00 - finish<br />
-                <i class="fa-solid fa-user"></i> Mahasiswa Sumantri<br />
-              </p>
-            </a>
-          </div>
-          <a href="" class="festival-event-foot"> See More > </a>
+        <div class="festival-image-display">
         </div>
       </div>
+      <div class="festival-list">
+        <div class="festival-event">
+          <a href="">
+            <div class="festival-event-head">
+              <b>FEWANUSA IV</b>
+              <p>03 October 2023</p>
+            </div>
+            <p>
+              <i class="fa-solid fa-map-pin"></i> Lap. Segitiga Kota
+              Sawahlunto<br />
+              <i class="fa-solid fa-clock"></i> 20.00 - finish<br />
+              <i class="fa-solid fa-user"></i> Kanastren Nereswara
+              Darmanasti<br />
+            </p>
+          </a>
+        </div>
+        <div class="festival-event">
+          <a href="">
+            <div class="festival-event-head">
+              <b>Pagelaran Wayang Kulit</b>
+              <p>14 Agustus 2023</p>
+            </div>
+            <p>
+              <i class="fa-solid fa-map-pin"></i> Pelataran Gedung Kesehatan
+              Unimus, Semarang<br />
+              <i class="fa-solid fa-clock"></i> 19.00 - finish<br />
+              <i class="fa-solid fa-user"></i> Ki Ketut Budiman, S.T.<br />
+            </p>
+          </a>
+        </div>
+        <div class="festival-event">
+          <a href="">
+            <div class="festival-event-head">
+              <b>Pagelaran Wayang Wong</b>
+              <p>29 Juni 2023</p>
+            </div>
+            <p>
+              <i class="fa-solid fa-map-pin"></i> Taman Indonesia Kaya,
+              Semarang<br />
+              <i class="fa-solid fa-clock"></i> 22.00 - finish<br />
+              <i class="fa-solid fa-user"></i> Mahasiswa Sumantri<br />
+            </p>
+          </a>
+        </div>
+        <div class="festival-event">
+          <a href="">
+            <div class="festival-event-head">
+              <b>Pagelaran Wayang Wong</b>
+              <p>29 Juni 2023</p>
+            </div>
+            <p>
+              <i class="fa-solid fa-map-pin"></i> Taman Indonesia Kaya,
+              Semarang<br />
+              <i class="fa-solid fa-clock"></i> 22.00 - finish<br />
+              <i class="fa-solid fa-user"></i> Mahasiswa Sumantri<br />
+            </p>
+          </a>
+        </div>
+        <a href="" class="festival-event-foot"> See More > </a>
+      </div>
+    </div>
+    <div class="festival-divider"></div>
+  </div>
+    <!--
       <div class="divider-section">
-        <div class="divider-content">
+        <div class="divider-content"> 
           <img src="images/logo/logo-white-width.png" alt="">
           <span>Preserve Indonesian culture and heritage</span>
         </div>
+      </div>-->
+  <div class="tokoh-section">
+    <div class="tokoh-content" id="tokoh">
+      <div class="tokoh-title">
+        <p>Master storytellers behind the shadow puppet magic</p>
+        <h3 id="tokoh-title">Dalang Legends</h3>
       </div>
-    </div>
-    <div class="tokoh-section">
-      <div class="tokoh-content" id="tokoh">
-        <div class="tokoh-title">
-          <p>Master storytellers behind the shadow puppet magic</p>
-          <h3 id="tokoh-title">Dalang Legends</h3>
+      <div class="tokoh-list">
+        <div class="tokoh">
+          <img src="images/dalang/Ki Suparman.jpg" alt="Tokoh">
+          <p>Ki Suparman</p>
         </div>
-        <div class="tokoh-list">
-          <div class="tokoh">
-            <img src="images/dalang/Ki Suparman.jpg" alt="Tokoh">
-            <p>Ki Suparman</p>
-          </div>
-          <div class="tokoh">
+        <div class="tokoh">
           <img src="images/dalang/Ki Narto Sabdo.jpg" alt="Tokoh">
-            <p>Ki Narto Sabdo</p>
-          </div>
-          <div class="tokoh">
+          <p>Ki Narto Sabdo</p>
+        </div>
+        <div class="tokoh">
           <img src="images/dalang/Ki Manteb Soedharsono.jpg" alt="Tokoh">
-            <p>Ki Manteb Soedharsono</p>
-          </div>
-          <div class="tokoh">
-            <img src="images/dalang/Ki Sorwedi.jpg" alt="Tokoh">
-            <p>Ki Sorwedi</p>
-          </div>
-          <div class="tokoh">
+          <p>Ki Manteb Soedharsono</p>
+        </div>
+        <div class="tokoh">
+          <img src="images/dalang/Ki Sorwedi.jpg" alt="Tokoh">
+          <p>Ki Sorwedi</p>
+        </div>
+        <div class="tokoh">
           <img src="images/dalang/Ki Slamet Gundono.jpg" alt="Tokoh">
-            <p>Ki Slamet Gundono</p>
-          </div>
-          <div class="tokoh">
+          <p>Ki Slamet Gundono</p>
+        </div>
+        <div class="tokoh">
           <img src="images/dalang/Ki Cecep Supriyadi.jpg" alt="Tokoh">
-            <p>Ki Cecep Supriyadi</p>
-          </div>
-          <div class="tokoh">
+          <p>Ki Cecep Supriyadi</p>
+        </div>
+        <div class="tokoh">
           <img src="images/dalang/Ki Anom Suroto.jpg" alt="Tokoh">
-            <p>Ki Anam Suroto</p>
-          </div>
+          <p>Ki Anam Suroto</p>
         </div>
       </div>
     </div>
-    <div class="map-section">
-      <div class="map-content" id="museum">
-        <div class="map-title">
-          <p>Explore the world of wayang</p>
-          <h3 id="map-title">Wayang Museum</h3>
-        </div>
-        <div class="mapbox">
-          <div id="map"></div>
-          <small>Click on the marker to see the museum's name</small>
+  </div>
+  <div class="map-section" id="map-section">
+    <div class="map-content" id="museum">
+      <div class="map-title">
+        <p>Explore the world of wayang</p>
+        <h3 id="map-title">Wayang Museum</h3>
+      </div>
+      <div class="mapbox">
+        <div id="map"></div>
+        <small>Click on the marker to see the museum's name</small>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-box">
+      <div class="footer-item">
+        <img src="images/logo/logo-white-width.png" alt="Logo Srimulat" width="200" />
+        <p class="paragraph-footer-left" id="tulisan-footer">
+          Srimulat is a website that provides information about Indonesian
+          puppet culture. This website is made for the purpose of educating
+          and promoting the diversity of Indonesian puppet arts to the wider
+          global audience.
+        </p>
+      </div>
+      <div class="footer-item left">
+        <h3 id="tulisan-footer">Contact</h3>
+        <p id="tulisan-footer">
+          <i class="fa-solid fa-map-marker" id="tulisan-footer"></i> Jl. Raya
+          Bandung No.100, Cibeunying, Kota Bandung, Jawa Barat 40115
+        </p>
+        <p id="tulisan-footer">
+          <i id="tulisan-footer" class="fa-solid fa-phone"></i> +62 22 2500080
+        </p>
+        <p id="tulisan-footer">
+          <i id="tulisan-footer" class="fa-solid fa-envelope"></i>
+          srimulat@gmail.com
+        </p>
+      </div>
+      <div class="footer-item right">
+        <h3 id="tulisan-footer">Follow Us</h3>
+        <div class="social-media">
+          <a href="">
+            <i id="social-media" class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="">
+            <i id="social-media" class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="">
+            <i id="social-media" class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="">
+            <i id="social-media" class="fa-brands fa-youtube"></i>
+          </a>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="footer-box">
-        <div class="footer-item">
-          <img
-            src="images/logo/logo-white-width.png"
-            alt="Logo Srimulat"
-            width="200"
-          />
-          <p class="paragraph-footer-left" id="tulisan-footer">
-            Srimulat is a website that provides information about Indonesian
-            puppet culture. This website is made for the purpose of educating
-            and promoting the diversity of Indonesian puppet arts to the wider
-            global audience.
-          </p>
-        </div>
-        <div class="footer-item left">
-          <h3 id="tulisan-footer">Contact</h3>
-          <p id="tulisan-footer">
-            <i class="fa-solid fa-map-marker" id="tulisan-footer"></i> Jl. Raya
-            Bandung No.100, Cibeunying, Kota Bandung, Jawa Barat 40115
-          </p>
-          <p id="tulisan-footer">
-            <i id="tulisan-footer" class="fa-solid fa-phone"></i> +62 22 2500080
-          </p>
-          <p id="tulisan-footer">
-            <i id="tulisan-footer" class="fa-solid fa-envelope"></i>
-            srimulat@gmail.com
-          </p>
-        </div>
-        <div class="footer-item right">
-          <h3 id="tulisan-footer">Follow Us</h3>
-          <div class="social-media">
-            <a href="">
-              <i id="social-media" class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="">
-              <i id="social-media" class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="">
-              <i id="social-media" class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="">
-              <i id="social-media" class="fa-brands fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <small>© 2023 Srimulat. All rights reserved.</small>
-      </div>
-    </footer>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="js/map.js"></script>
-    <script
-      src="https://kit.fontawesome.com/d9b2e6872d.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <div class="footer-bottom">
+      <small>© 2023 Srimulat. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
+  <script src="https://kit.fontawesome.com/d9b2e6872d.js" crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      let swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        effect: "slide",
-        speed: 1000,
-        autoplay: {
-          delay: 3000,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      })
+  <!-- Initialize Swiper -->
+  <script>
+    let swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      effect: "slide",
+      speed: 1000,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    })
 
-      function toggleDarkMode() {
-        var body = document.body
-        body.classList.toggle("dark-mode")
+    function toggleDarkMode() {
+      var body = document.body
+      body.classList.toggle("dark-mode")
 
-        var overlay = document.querySelector(".hero-overlay")
-        var museumOverlay = document.querySelector(".museum-overlay")
-        var content = document.querySelector(".hero-content")
-        var checkbox = document.getElementById("checkbox")
-        var festivalSection = document.querySelector(".festival-section")
-        var tokohSection = document.querySelector(".tokoh-section")
-        var mapSection = document.querySelector(".map-section")
-        var h3 = document.querySelectorAll("h3")
-        var festivalTitle = document.querySelector("#festival-title")
-        var tokohTitle = document.querySelector("#tokoh-title")
-        var mapTitle = document.querySelector("#map-title")
-        var p = document.querySelectorAll("p")
-        var b = document.querySelectorAll("b")
-        var heroFooter = document.querySelectorAll("#hero-footer")
-        var festivalEvent = document.querySelectorAll(".festival-event")
-        var socialMedia = document.querySelectorAll("#social-media")
-        var tulisanFooter = document.querySelectorAll("#tulisan-footer")
-        var footerBox = document.querySelector(".footer-box")
+      var overlay = document.querySelector(".hero-overlay")
+      var museumOverlay = document.querySelector(".museum-overlay")
+      var content = document.querySelector(".hero-content")
+      var checkbox = document.getElementById("checkbox")
+      var festivalSection = document.querySelector(".festival-section")
+      var tokohSection = document.querySelector(".tokoh-section")
+      var mapSection = document.querySelector(".map-section")
+      var h3 = document.querySelectorAll("h3")
+      var festivalTitle = document.querySelector("#festival-title")
+      var tokohTitle = document.querySelector("#tokoh-title")
+      var mapTitle = document.querySelector("#map-title")
+      var p = document.querySelectorAll("p")
+      var b = document.querySelectorAll("b")
+      var heroFooter = document.querySelectorAll("#hero-footer")
+      var festivalEvent = document.querySelectorAll(".festival-event")
+      var socialMedia = document.querySelectorAll("#social-media")
+      var tulisanFooter = document.querySelectorAll("#tulisan-footer")
+      var footerBox = document.querySelector(".footer-box")
+      let festivalDivider = document.querySelector(".festival-divider");
 
-        if (checkbox.checked == true) {
-          overlay.classList.add("visible")
-          festivalSection.classList.remove("lightMode")
-          tokohSection.classList.remove("lightMode")
-          mapSection.classList.remove("lightMode")
+      if (checkbox.checked == true) {
+        overlay.classList.add("visible")
+        festivalSection.classList.remove("lightMode")
+        tokohSection.classList.remove("lightMode")
+        mapSection.classList.remove("lightMode")
 
-          p.forEach(function (element) {
-            element.classList.remove("black")
-          })
-          b.forEach(function (element) {
-            element.classList.remove("black")
-          })
-          h3.forEach(function (element) {
-            element.classList.remove("black")
-          })
-          heroFooter.forEach(function (element) {
-            element.classList.remove("black")
-          })
-          festivalEvent.forEach(function (element) {
-            element.classList.remove("lightMode")
-          })
-          socialMedia.forEach(function (element) {
-            element.classList.remove("darkGreen")
-          })
-          tulisanFooter.forEach(function (element) {
-            element.classList.remove("darkGreen")
-          })
+        p.forEach(function (element) {
+          element.classList.remove("black")
+        })
+        b.forEach(function (element) {
+          element.classList.remove("black")
+        })
+        h3.forEach(function (element) {
+          element.classList.remove("black")
+        })
+        heroFooter.forEach(function (element) {
+          element.classList.remove("black")
+        })
+        festivalEvent.forEach(function (element) {
+          element.classList.remove("lightMode")
+        })
+        socialMedia.forEach(function (element) {
+          element.classList.remove("darkGreen")
+        })
+        tulisanFooter.forEach(function (element) {
+          element.classList.remove("darkGreen")
+        })
 
-          footerBox.classList.remove("footerLight")
-        } else {
-          overlay.classList.remove("visible")
-          festivalSection.classList.add("lightMode")
-          tokohSection.classList.add("lightMode")
-          mapSection.classList.add("lightMode")
+        footerBox.classList.remove("footerLight")
+      } else {
+        overlay.classList.remove("visible")
+        festivalSection.classList.add("lightMode")
+        tokohSection.classList.add("lightMode")
+        mapSection.classList.add("lightMode")
+        festivalDivider.style.background = "url('images/light-divider.png')";
+        tokohSection.style.background = "url('images/light-background.png')";
 
-          p.forEach(function (element) {
-            element.classList.add("black")
-          })
-          b.forEach(function (element) {
-            element.classList.add("black")
-          })
-          h3.forEach(function (element) {
-            element.classList.add("black")
-          })
-          heroFooter.forEach(function (element) {
-            element.classList.add("black")
-          })
-          festivalEvent.forEach(function (element) {
-            element.classList.add("border")
-          })
-          socialMedia.forEach(function (element) {
-            element.classList.add("darkGreen")
-          })
-          tulisanFooter.forEach(function (element) {
-            element.classList.add("darkGreen")
-          })
-          footerBox.classList.add("footerLight")
-        }
+        p.forEach(function (element) {
+          element.classList.add("black")
+        })
+        b.forEach(function (element) {
+          element.classList.add("black")
+        })
+        h3.forEach(function (element) {
+          element.classList.add("black")
+        })
+        heroFooter.forEach(function (element) {
+          element.classList.add("black")
+        })
+        festivalEvent.forEach(function (element) {
+          element.classList.add("border")
+        })
+        socialMedia.forEach(function (element) {
+          element.classList.add("darkGreen")
+        })
+        tulisanFooter.forEach(function (element) {
+          element.classList.add("darkGreen")
+        })
+        footerBox.classList.add("footerLight")
       }
-    </script>
-    <script src="js/script.js"></script>
-  </body>
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>
