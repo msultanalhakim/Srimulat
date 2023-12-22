@@ -132,9 +132,9 @@
         background: linear-gradient(
             rgb(246, 210, 122, 0.8),
             rgb(246, 210, 122, 0.2),
-            rgb(21, 28, 20, 0.5),
-            rgb(21, 28, 20, 0.5),
-            rgb(21, 28, 20, 0.5),
+            rgb(246, 210, 122, 0.2),
+            rgb(246, 210, 122, 0.2),
+            rgb(246, 210, 122, 0.2),
             rgb(246, 210, 122, 0.5)
           ),
           url(../images/hero-section-4.webp) !important;
@@ -172,10 +172,6 @@
 
       .darkGreen {
         color: #243122 !important;
-      }
-
-      .greenLight {
-        color: #aebd92 !important;
       }
 
       .border {
@@ -238,7 +234,7 @@
       <!-- Swiper -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" id="swiper-slide-1">
+          <div class="swiper-slide">
             <div class="hero-content">
               <div class="hero-title">
                 <div class="title">
@@ -248,7 +244,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" id="swiper-slide-2">
+          <div class="swiper-slide">
             <div class="hero-content">
               <div class="hero-title">
                 <div class="title">
@@ -258,7 +254,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" id="swiper-slide-3">
+          <div class="swiper-slide">
             <div class="hero-content">
               <div class="hero-title">
                 <div class="title">
@@ -268,7 +264,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" id="swiper-slide-4">
+          <div class="swiper-slide">
             <div class="hero-content">
               <div class="hero-title">
                 <div class="title">
@@ -278,7 +274,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" id="swiper-slide-5">
+          <div class="swiper-slide">
             <div class="hero-content">
               <div class="hero-title">
                 <div class="title">
@@ -785,18 +781,6 @@
         let festivalDivider = document.querySelector(".festival-divider")
         let wayangSection = document.querySelector(".wayang-content")
 
-        var swiper1 = document.querySelector("#swiper-slide-1")
-        var swiper2 = document.querySelector("#swiper-slide-2")
-        var swiper3 = document.querySelector("#swiper-slide-3")
-        var swiper4 = document.querySelector("#swiper-slide-4")
-        var swiper5 = document.querySelector("#swiper-slide-5")
-        var pHero1 = document.querySelector("#hero-paragraph-1")
-        var pHero2 = document.querySelector("#hero-paragraph-2")
-        var pHero3 = document.querySelector("#hero-paragraph-3")
-        var pHero4 = document.querySelector("#hero-paragraph-4")
-        var pHero5 = document.querySelector("#hero-paragraph-5")
-        var eventDetail = document.querySelectorAll(".event-detail  ")
-
         // Hapus semua lapisan peta
         map.eachLayer(function (layer) {
           map.removeLayer(layer)
@@ -806,16 +790,7 @@
 
         if (checkbox.checked == true) {
           map.addLayer(darkMode)
-          swiper1.classList.add("overlay-dark-1")
-          swiper2.classList.add("overlay-dark-2")
-          swiper3.classList.add("overlay-dark-3")
-          swiper4.classList.add("overlay-dark-4")
-          swiper5.classList.add("overlay-dark-5")
-          swiper1.classList.remove("overlay-light-1")
-          swiper2.classList.remove("overlay-light-2")
-          swiper3.classList.remove("overlay-light-3")
-          swiper4.classList.remove("overlay-light-4")
-          swiper5.classList.remove("overlay-light-5")
+          overlay.classList.add("visible")
           festivalSection.classList.remove("lightMode")
           tokohSection.classList.remove("lightMode")
           mapSection.classList.remove("lightMode")
@@ -848,25 +823,11 @@
           footerBox.classList.remove("footerLight")
         } else {
           map.addLayer(lightMode)
-          swiper1.classList.remove("overlay-dark-1")
-          swiper2.classList.remove("overlay-dark-2")
-          swiper3.classList.remove("overlay-dark-3")
-          swiper4.classList.remove("overlay-dark-4")
-          swiper5.classList.remove("overlay-dark-5")
-          swiper1.classList.add("overlay-light-1")
-          swiper2.classList.add("overlay-light-2")
-          swiper3.classList.add("overlay-light-3")
-          swiper4.classList.add("overlay-light-4")
-          swiper5.classList.add("overlay-light-5")
+          overlay.classList.remove("visible")
           festivalSection.classList.add("lightMode")
           tokohSection.classList.add("lightMode")
           mapSection.classList.add("lightMode")
           wayangSection.classList.add("lightLegends")
-          pHero1.classList.add("greenLight")
-          pHero2.classList.add("greenLight")
-          pHero3.classList.add("greenLight")
-          pHero4.classList.add("greenLight")
-          pHero5.classList.add("greenLight")
           festivalDivider.style.background = "url('images/light-divider.png')"
           tokohSection.style.background = "url('images/light-background.png')"
 
