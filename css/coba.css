@@ -261,7 +261,7 @@ input:checked + .slider:before {
 }
 
 .hero-section .hero-overlay {
-  position: fixed;
+  position: absolute;
   visibility: hidden;
   top: 0;
   left: 0;
